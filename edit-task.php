@@ -33,10 +33,10 @@ $task = $result->fetch_assoc(); //fetches a result as an array.
     <div id="form">
         <form action="update-task.php?id=<?= $_GET["id"] ?>" method="post">
             <label for="title">Title:</label><br>
-            <input type="text" id="title" name="title" value="<?= $task["title"] ?>"><br>
+            <input type="text" id="title" name="title" value="<?= $task["title"] ?>" required><br>
             <label for="description">Descriprion:</label><br>
-            <textarea type="textarea" id="description" name="description" rows="6"><?= $task["description"] ?></textarea><br>
-            <input type="radio" id="completed" name="status" value="completed" <?= $task["status"] == 1 ? "checked" : "" ?>>
+            <textarea type="textarea" id="description" name="description" rows="6" required><?= $task["description"] ?></textarea><br>
+            <input type="radio" id="completed" name="status" value="completed" <?= $task["status"] == 1 ? "checked" : "" ?> required>
             <label for="status">Completed</label><br>
             <input type="radio" id="incompleted" name="status" value="incompleted" <?= $task["status"] == 0 ? "checked" : "" ?>>
             <label for="status">Incompleted</label><br>
